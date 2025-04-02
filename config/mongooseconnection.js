@@ -1,12 +1,15 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
+const dbgr = require('debug')("development:mongoose")
 
 
-mongoose.connect("mongodb://localhost:27017/BagDrift")
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/bagdrift")
     .then(() => {
-        console.log("Connected to MongoDB")
+        dbgr("Connected to MongoDB")
     })
     .catch(err => { 
-        console.log("Error connecting to MongoDB", err)
+        dbgr("Error connecting to MongoDB", err)
     })
 
 

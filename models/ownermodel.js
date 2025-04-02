@@ -9,7 +9,7 @@ const ownerSchema = mongoose.Schema({
     porduct: Array,
     password: String,
     picture: String,
-    gstin: String
 })
 
-module.exports = mongoose.model("Owner", ownerSchema)
+const Owner = mongoose.model('Owner', ownerSchema, 'owners'); // 'owners' is the collection name
+module.exports = Owner;
