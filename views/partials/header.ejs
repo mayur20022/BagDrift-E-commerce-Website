@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-['helvetica_now_display']">
+    <nav class="w-full fixed top-0 left-0 bg-white shadow-md px-5 py-3 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold">Scatch</a>
+
+        <% var loggedin=typeof loggedin !=="undefined" ? loggedin : true; %>
+            <% if (loggedin) { %>
+                <div class="flex items-center space-x-6">
+                    <a href="/cart" class="flex items-center space-x-1 text-gray-700 hover:text-black">
+                        <i class="ri-shopping-cart-line"></i>
+                        <span>Cart</span>
+                    </a>
+                    <a href="/account" class="flex items-center space-x-1 text-gray-700 hover:text-black">
+                        <i class="ri-user-line"></i>
+                        <span>My Account</span>
+                    </a>
+                    <a href="/shop" class="flex items-center space-x-1 text-gray-700 hover:text-black">
+                        <i class="ri-store-line"></i>
+                        <span>Shop</span>
+                    </a>
+                    <a href="/logout" class="flex items-center space-x-1 text-red-500 hover:text-red-700">
+                        <i class="ri-logout-box-line"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+                <% } %>
+    </nav>
+</body>
+
+</html>

@@ -12,20 +12,16 @@
 </head>
 
 <body>
+<%- include('./partials/header') %>
     <div class="w-full h-screen flex items-start px-20 py-20">
-        <!-- Sidebar -->
         <div class="w-[25%] flex h-screen flex-col items-start">
             <div class="flex flex-col">
                 <a class="block w-fit mb-2" href="">All Products</a>
                 <a class="block w-fit mb-2" href="">Create new product</a>
             </div>
         </div>
-
-        <!-- Main Content -->
         <div class="w-[75%] flex flex-col gap-5 h-screen">
             <a class="text-red-500" href="">Delete all</a>
-
-            <!-- Product List Row 1 -->
             <div class="flex items-start gap-5">
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
@@ -39,7 +35,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -52,7 +47,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -65,7 +59,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -79,8 +72,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Product List Row 2 -->
             <div class="flex items-start gap-5">
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
@@ -94,7 +85,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -107,7 +97,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -120,7 +109,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="w-60 bg-red-500">
                     <div class="w-full h-52 bg-yellow-500"></div>
                     <div class="flex justify-between items-center px-4 py-4">
@@ -136,6 +124,7 @@
             </div>
         </div>
     </div>
+    <%- include('./partials/footer') %>
 </body>
 
 </html>

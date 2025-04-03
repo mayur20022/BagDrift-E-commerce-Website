@@ -3,10 +3,9 @@ const router = express.Router()
 const Owner = require('../models/ownermodel')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const isLoggin = require('../middlewares/isLoggin')
 
-router.get("/", (req, res) => {
-    res.send("Hello World")
-})
+
 
 if (process.env.NODE_ENV === "development") {
     router.post("/create", async (req, res) => {
@@ -44,6 +43,10 @@ if (process.env.NODE_ENV === "development") {
 }
 
 
+router.get("/admin", isLoggin,(req, res) => {
+    let success = req.flash("success")
+    res.render("createproducts", { success })
+})
 
 
 
