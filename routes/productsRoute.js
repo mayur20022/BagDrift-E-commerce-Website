@@ -26,12 +26,6 @@ router.post("/create", isLoggin,upload, async (req, res) => {
    }
 })
 
-router.get("/addtocart/:id", isLoggin,async(req, res) => {
-    const id = req.params.id;
-    const user = req.user;
-    user.cart.push(id)
-    user.save()
-    res.send(user)
-})
+
 
 module.exports = router

@@ -12,6 +12,14 @@
 <body >
 <%- include('./partials/header') %>
     <div class="w-full h-screen  flex items-start px-20 py-20">
+
+        <% if(success.length>0){ %>
+            <div class="absolute top-18 left-1/2 -translate-x-1/2 -translate-y-1/2 p-3 rounded-md bg-blue-500">
+                <span class="inline-block mt-1 mb-1 text-white">
+                    <%= success %>
+                </span>
+            </div>
+            <% } %>
         <div class="w-[25%] flex h-screen flex-col items-start">
             <div class="flex items-center gap-2">
                 <h3>sort by</h3>
@@ -50,7 +58,7 @@
                                 <h4>₹ <%= product.price %>
                                 </h4>
                             </div>
-                            <a class="w-7 h-7 flex items-center justify-center rounded-full bg-blue-100" href="/products/addtocart/<%= product._id %>">
+                            <a class="w-7 h-7 flex items-center justify-center rounded-full bg-blue-100" href="/addtocart/<%= product._id %>">
                                 <i class="ri-add-line text-black"></i>
                             </a>
                         </div>
